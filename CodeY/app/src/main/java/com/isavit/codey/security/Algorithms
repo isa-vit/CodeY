@@ -1,0 +1,4 @@
+## Algorithms
+
+- Use any strong encryption/decryption algorithms to store the credentials like *AES*.
+- Use strong *hashing algorithms* for passwords like SHA-256
