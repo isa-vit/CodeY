@@ -38,7 +38,7 @@
             android:layout_width="300sp"
             android:layout_height="wrap_content"
 
-            />
+            android:inputType="textEmailAddress" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -60,7 +60,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password" />
+            android:hint="@string/password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -80,7 +81,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/retype_password" />
+            android:hint="@string/retype_password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -95,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/gotoSignupTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_in_with_password"

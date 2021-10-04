@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/dalwa/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/drawable/auth_textview.xml" value="0.2703125" />
+        <entry key="..\:/Users/dalwa/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_code_editor.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dalwa/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/dalwa/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_launcher.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dalwa/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/dalwa/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_signup.xml" value="0.2" />
       </map>
