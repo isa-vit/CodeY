@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.CodeY" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/theme_black</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -11,6 +11,10 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- Default font family for entire application -->
+        <item name="android:fontFamily">@font/montserrat</item>
+        <!-- Set the default text colour -->
+        <item name="android:textColor">@color/theme_black</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 </resources>

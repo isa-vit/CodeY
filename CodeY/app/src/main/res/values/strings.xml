@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">CodeY</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="codey">CodeY</string>
+
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in_with_password">Sign in with password</string>
+    <string name="sign_up_with_password">Sign up with password</string>
+    <string name="sign_in">Sign in</string>
 </resources>
