@@ -21,5 +21,14 @@ public class Algorithm {
         return decryptedText;
 
     }
+    
+    public static String getHash(String text) {
+
+        String hash = "";
+
+
+        return hash;
+
+    }
 
 }
