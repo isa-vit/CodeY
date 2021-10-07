@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeY">
         <activity
+            android:name=".home.MyPrograms"
+            android:exported="true" />
+        <activity
+            android:name=".home.ClickScanRun"
+            android:exported="true" />
+        <activity
+            android:name=".home.Notes"
+            android:exported="true" />
+        <activity
             android:name=".editor.CodeEditor"
             android:exported="true" />
         <activity
@@ -17,23 +26,19 @@
             android:exported="true" />
         <activity
             android:name=".authentication.Signup"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".authentication.Login"
             android:exported="true" />
         <activity
             android:name=".Launcher"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
