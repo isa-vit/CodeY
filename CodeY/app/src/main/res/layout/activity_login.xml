@@ -81,6 +81,7 @@
         android:layout_height="wrap_content"
         android:text="@string/sign_up_with_password"
         android:textSize="16sp"
+        android:onClick="taketoLogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/signupButton"
         app:layout_constraintStart_toStartOf="@+id/signupButton"
