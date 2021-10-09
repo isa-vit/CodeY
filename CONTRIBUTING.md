@@ -2,7 +2,7 @@
 
 - Work with either **Java/Kotlin** whichever language you are comfortable with
 - Create issues first, start working only after getting it assigned
-- Add a screenshot if appropriate (_say for the UI_), while making the PR
+- Add a screenshot if appropriate (_say for the UI_), also mention the ```issue number```, while making the PR
 - Once you complete your part, create a pull request
 - ```Happy Contributing :) ```
 
