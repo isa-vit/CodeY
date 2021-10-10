@@ -9,4 +9,9 @@
     <string name="sign_in_with_password">Sign in with password</string>
     <string name="sign_up_with_password">Sign up with password</string>
     <string name="sign_in">Sign in</string>
+    <string name="new_programs">New Programs</string>
+    <string name="my_programs">My Programs</string>
+    <string name="click_scan_run">Click-Scan-Run</string>
+    <string name="notes">Notes</string>
+    <string name="holla_coder">Holla Coder!</string>
 </resources>

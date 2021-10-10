@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/drawable/auth_textview.xml" value="0.2703125" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/drawable/backbutton.xml" value="0.2703125" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/drawable/card_bg.xml" value="0.14635416666666667" />
-        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_click_scan_run.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_click_scan_run.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_code_editor.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_my_programs.xml" value="0.264" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_notes.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/activity_signup.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/layout/bg_card.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dalwa/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/drawable/auth_textview.xml" value="0.2703125" />
