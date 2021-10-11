@@ -1,5 +1,12 @@
 package com.isavit.codey.security;
 
+import android.util.Base64;
+
+import java.security.spec.KeySpec;
+
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+
 public class Algorithm {
 
     private String key = "";
@@ -24,10 +31,23 @@ public class Algorithm {
     
     public static String getHash(String text) {
 
-        String hash = "";
+        // Generate a 512-bit key
+        final int outputKeyLength = 512;
 
+        char[] chars = new char[text.length()];
+        text.getChars(0, text.length(), chars, 0);
+        byte[] salt = "PBKDF2WithHmacSHA1".getBytes();
 
-        return hash;
+        byte[] hashedPassBytes = new byte[0];
+        try {
+            SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+            KeySpec keySpec = new PBEKeySpec(chars, salt, 1000, outputKeyLength);
+
+            hashedPassBytes = secretKeyFactory.generateSecret(keySpec).getEncoded();
+        } catch (Exception shouldNotHappen) {
+        }
+
+        return Base64.encodeToString(hashedPassBytes, Base64.DEFAULT);
 
     }
 

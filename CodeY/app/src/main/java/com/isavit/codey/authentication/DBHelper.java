@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
+import com.isavit.codey.security.Algorithm;
 
 public class DBHelper extends SQLiteOpenHelper {
     public DBHelper( Context context) {
@@ -25,15 +25,17 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean insertData(String username, String password){
+    public boolean insertData(String username, String password) {
         SQLiteDatabase myDB = this.getWritableDatabase();
-        ContentValues contentValues =new ContentValues();
-        contentValues.put("username",username);
-        contentValues.put("password",password);
-        long result = myDB.insert("users",null,contentValues);
-        if(result==-1){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("username", username);
+        // Hash the password before saving to db
+        String hashedPassword = Algorithm.getHash(password);
+        contentValues.put("password", hashedPassword);
+        long result = myDB.insert("users", null, contentValues);
+        if (result == -1) {
             return false;
-        }else{
+        } else {
             return true;
         }
     }
@@ -49,12 +51,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public Boolean checkusernamePassword(String username, String password){
-        SQLiteDatabase myDB =this.getWritableDatabase();
-        Cursor cursor= myDB.rawQuery("select * from users where username=? and password = ?",new String[] {username,password});
-        if(cursor.getCount()>0){
+    public Boolean checkusernamePassword(String username, String password) {
+        SQLiteDatabase myDB = this.getWritableDatabase();
+        // Hash the password before checking in db
+        password = Algorithm.getHash(password);
+        Cursor cursor = myDB.rawQuery("select * from users where username=? and password = ?", new String[]{username, password});
+        if (cursor.getCount() > 0) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
