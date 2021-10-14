@@ -1,6 +1,8 @@
 package com.isavit.codey.authentication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.preference.PreferenceManager;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.chip.ChipDrawable;
 import com.isavit.codey.R;
 import com.isavit.codey.home.Home;
 
@@ -39,7 +42,7 @@ public class Signup extends AppCompatActivity {
         btnSignUp=(Button)findViewById(R.id.btnSignUp);
         gotoSignIn=(Button)findViewById(R.id.gotoSignIn);
         myDB = new DBHelper(this);
-
+        applyTheme();
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,5 +81,11 @@ public class Signup extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void applyTheme(){
+        int theme = PreferenceManager.getDefaultSharedPreferences(this).getInt("com.isavit.codey.DARK_STATUS", AppCompatDelegate.MODE_NIGHT_NO);
+        AppCompatDelegate.setDefaultNightMode(theme);
+        getDelegate().applyDayNight();
     }
 }
