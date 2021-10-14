@@ -11,7 +11,7 @@ class MyPreferences(context: Context?) {
 
     private val preferences = PreferenceManager.getDefaultSharedPreferences(context)
 
-    var darkMode = preferences.getInt(DARK_STATUS, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+    var darkMode = preferences.getInt(DARK_STATUS, AppCompatDelegate.getDefaultNightMode())
         set(value) = preferences.edit().putInt(DARK_STATUS, value).apply()
 
 }
