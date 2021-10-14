@@ -22,7 +22,6 @@
             android:layout_height="80dp"
             android:layout_marginTop="50dp"
             android:text="@string/holla_coder"
-            android:textColor="@color/black"
             android:textSize="35sp"
             tools:layout_editor_absoluteX="52dp"
             tools:layout_editor_absoluteY="53dp" />
