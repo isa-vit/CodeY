@@ -30,7 +30,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView"/>
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
 
     <EditText
@@ -39,13 +39,13 @@
         android:layout_width="300sp"
         android:layout_height="50sp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/username"
-        app:layout_constraintStart_toStartOf="@+id/username"
-        app:layout_constraintTop_toBottomOf="@+id/username"
         android:hint="@string/password"
+        android:inputType="textPassword"
         android:text=""
         android:textSize="20sp"
-        android:inputType="textPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/username"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
 
     <EditText
@@ -54,13 +54,13 @@
         android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:hint="@string/retype_password"
+        android:inputType="textPassword"
         android:text=""
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/password"
         app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        android:hint="@string/retype_password"
-        android:inputType="textPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
 
     <Button
@@ -69,7 +69,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="@string/sign_up"
-        android:backgroundTint="@color/theme_black"
         app:layout_constraintEnd_toEndOf="@+id/repassword"
         app:layout_constraintStart_toStartOf="@+id/repassword"
         app:layout_constraintTop_toBottomOf="@+id/repassword" />

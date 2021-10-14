@@ -24,7 +24,7 @@
         android:layout_width="56dp"
         android:layout_height="59dp"
         android:layout_marginStart="16dp"
-        android:background="@color/white"
+        android:background="@color/transparent_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/NotesTitle"
         app:layout_constraintHorizontal_bias="1.0"
