@@ -16,25 +16,25 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        var currentTheme = MyPreferences(this).darkMode
+        val currentTheme = MyPreferences(this).darkMode
         applyTheme(currentTheme)
-        val myprog = findViewById<TextView>(R.id.MyPrograms)
+        val myprog = findViewById<TextView>(R.id.myPrograms)
         val clickscanrun = findViewById<TextView>(R.id.clickscanrun)
         val notes = findViewById<TextView>(R.id.notes)
         val themeSwitch = findViewById<ImageButton>(R.id.themeSwitch)
 
         myprog.setOnClickListener {
-            var intent = Intent(this, MyPrograms::class.java)
+            val intent = Intent(this, MyPrograms::class.java)
             startActivity(intent)
         }
 
         clickscanrun.setOnClickListener {
-            var intent = Intent(this, ClickScanRun::class.java)
+            val intent = Intent(this, ClickScanRun::class.java)
             startActivity(intent)
         }
 
         notes.setOnClickListener {
-            var intent = Intent(this, Notes::class.java)
+            val intent = Intent(this, Notes::class.java)
             startActivity(intent)
         }
         themeSwitch.setOnClickListener {

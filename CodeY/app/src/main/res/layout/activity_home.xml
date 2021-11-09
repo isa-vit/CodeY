@@ -52,7 +52,7 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/MyPrograms"
+            android:id="@+id/myPrograms"
             android:layout_width="350dp"
             android:layout_height="77dp"
             android:layout_marginTop="50dp"
