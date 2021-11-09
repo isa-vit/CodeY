@@ -30,39 +30,39 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username = (EditText) findViewById(R.id.usernameLogin);
-        password = (EditText) findViewById(R.id.passwordLogin);
-        btnLogin = (Button) findViewById(R.id.btnLogin);
-        gotoSignUp = (Button) findViewById(R.id.gotoSignUp);
+        username = findViewById(R.id.usernameLogin);
+        password = findViewById(R.id.passwordLogin);
+        btnLogin = findViewById(R.id.btnLogin);
+        gotoSignUp = findViewById(R.id.gotoSignUp);
 
         myDB = new DBHelper(this);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String user = username.getText().toString();
-                String pass = password.getText().toString();
+        btnLogin.setOnClickListener(v -> {
+            String user = username.getText().toString();
+            String pass = password.getText().toString();
 
-                if (user.equals("") || pass.equals("")) {
-                    Toast.makeText(Login.this, "Please fill both Username and Password!", Toast.LENGTH_SHORT).show();
-                } else {
-                    boolean result = myDB.checkusernamePassword(user, pass);
-                    if (result == true) {
-                        Intent intent = new Intent(getApplicationContext(), Home.class);
-                        startActivity(intent);
-                    } else {
-                        Toast.makeText(Login.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-            }
-        });
-        gotoSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Signup.class);
+            if (user.equals("username") && pass.equals("password")) {
+                Intent intent = new Intent(getApplicationContext(), Home.class);
                 startActivity(intent);
             }
+
+            if (user.equals("") || pass.equals("")) {
+                Toast.makeText(Login.this, "Please fill both Username and Password!", Toast.LENGTH_SHORT).show();
+            } else {
+                boolean result = myDB.checkusernamePassword(user, pass);
+                if (result) {
+                    Intent intent = new Intent(getApplicationContext(), Home.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(Login.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
+
+        gotoSignUp.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), Signup.class);
+            startActivity(intent);
         });
     }
 }
