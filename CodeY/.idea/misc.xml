@@ -3,6 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/drawable/auth_textview.xml" value="0.26614583333333336" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/drawable/backbutton.xml" value="0.26614583333333336" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/drawable/capturedrawable.xml" value="0.26614583333333336" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/drawable/card_bg.xml" value="0.26614583333333336" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/drawable/gallerydrawable.xml" value="0.26614583333333336" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26614583333333336" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/font/montserrat.xml" value="0.27589743589743587" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/layout/activity_click_scan_run.xml" value="0.14673913043478262" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/layout/activity_code_editor.xml" value="0.14673913043478262" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/layout/activity_home.xml" value="0.14673913043478262" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/layout/activity_launcher.xml" value="0.14673913043478262" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/layout/activity_login.xml" value="0.14673913043478262" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/layout/activity_my_programs.xml" value="0.14673913043478262" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/layout/activity_notes.xml" value="0.14673913043478262" />
+        <entry key="..\:/CodeY-1/CodeY/app/src/main/res/layout/activity_signup.xml" value="0.14673913043478262" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/drawable/auth_textview.xml" value="0.2703125" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/drawable/backbutton.xml" value="0.2703125" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/CodeY/CodeY/app/src/main/res/drawable/capturedrawable.xml" value="0.2703125" />

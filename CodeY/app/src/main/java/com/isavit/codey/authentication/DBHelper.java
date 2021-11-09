@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.isavit.codey.security.Algorithm;
 
 public class DBHelper extends SQLiteOpenHelper {
-    public DBHelper( Context context) {
+    public DBHelper(Context context) {
         super(context, "Login.db", null, 1);
     }
 
@@ -40,12 +40,12 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean checkusername(String username){
-        SQLiteDatabase myDB= this.getWritableDatabase();
-        Cursor cursor= myDB.rawQuery("select * from users where username=?",new String[] {username});
-        if(cursor.getCount()>0){
+    public boolean checkusername(String username) {
+        SQLiteDatabase myDB = this.getWritableDatabase();
+        Cursor cursor = myDB.rawQuery("select * from users where username=?", new String[]{username});
+        if (cursor.getCount() > 0) {
             return true;
-        }else{
+        } else {
             return false;
         }
 

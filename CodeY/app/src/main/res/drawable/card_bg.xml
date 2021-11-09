@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item >
+    <item>
         <shape>
             <solid android:color="#C3C3C3" />
-            <corners android:radius="30dp"/>
+            <corners android:radius="30dp" />
         </shape>
     </item>
-    <item android:right="2dp" android:left="2dp" android:bottom="4dp">
+    <item
+        android:bottom="4dp"
+        android:left="2dp"
+        android:right="2dp">
         <shape>
-            <solid android:color="#FFF"/>
-            <corners android:radius="30dp"/>
+            <solid android:color="#FFF" />
+            <corners android:radius="30dp" />
         </shape>
     </item>
 </layer-list>

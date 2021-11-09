@@ -15,9 +15,7 @@ public class Algorithm {
 
         String encryptedText = "";
 
-
         return encryptedText;
-
     }
 
     public static String decryption(String cipherText) {
@@ -28,7 +26,7 @@ public class Algorithm {
         return decryptedText;
 
     }
-    
+
     public static String getHash(String text) {
 
         // Generate a 512-bit key
