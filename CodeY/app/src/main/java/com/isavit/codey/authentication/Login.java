@@ -15,10 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- *
  * This is the login activity
  * The username, password are verified comparing the the locally stored credentials
- *
  */
 
 public class Login extends AppCompatActivity {
@@ -32,10 +30,10 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username=(EditText)findViewById(R.id.usernameLogin);
-        password=(EditText)findViewById(R.id.passwordLogin);
-        btnLogin=(Button)findViewById(R.id.btnLogin);
-        gotoSignUp=(Button)findViewById(R.id.gotoSignUp);
+        username = (EditText) findViewById(R.id.usernameLogin);
+        password = (EditText) findViewById(R.id.passwordLogin);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
+        gotoSignUp = (Button) findViewById(R.id.gotoSignUp);
 
         myDB = new DBHelper(this);
 
@@ -45,15 +43,15 @@ public class Login extends AppCompatActivity {
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
 
-                if(user.equals("")||pass.equals("")){
-                    Toast.makeText(Login.this,"Please fill both Username and Password!",Toast.LENGTH_SHORT).show();
-                }else{
+                if (user.equals("") || pass.equals("")) {
+                    Toast.makeText(Login.this, "Please fill both Username and Password!", Toast.LENGTH_SHORT).show();
+                } else {
                     boolean result = myDB.checkusernamePassword(user, pass);
-                    if(result==true){
+                    if (result == true) {
                         Intent intent = new Intent(getApplicationContext(), Home.class);
                         startActivity(intent);
-                    }else{
-                        Toast.makeText(Login.this,"Invalid Username or Password", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(Login.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
                     }
                 }
 

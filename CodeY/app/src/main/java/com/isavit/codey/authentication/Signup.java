@@ -16,11 +16,10 @@ import com.isavit.codey.R;
 import com.isavit.codey.home.Home;
 
 /**
- *
  * This is the signup activity
  * The username, password are locally stored
- * @SharedPreferences in PRIVATE mode can be used for the same
  *
+ * @SharedPreferences in PRIVATE mode can be used for the same
  */
 
 public class Signup extends AppCompatActivity {
@@ -29,18 +28,17 @@ public class Signup extends AppCompatActivity {
     DBHelper myDB;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        username=(EditText)findViewById(R.id.username);
-        password=(EditText)findViewById(R.id.password);
-        repassword=(EditText)findViewById(R.id.repassword);
+        username = (EditText) findViewById(R.id.username);
+        password = (EditText) findViewById(R.id.password);
+        repassword = (EditText) findViewById(R.id.repassword);
 
-        btnSignUp=(Button)findViewById(R.id.btnSignUp);
-        gotoSignIn=(Button)findViewById(R.id.gotoSignIn);
+        btnSignUp = (Button) findViewById(R.id.btnSignUp);
+        gotoSignIn = (Button) findViewById(R.id.gotoSignIn);
         myDB = new DBHelper(this);
         applyTheme();
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -48,27 +46,27 @@ public class Signup extends AppCompatActivity {
             public void onClick(View v) {
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
-                String repass= repassword.getText().toString();
+                String repass = repassword.getText().toString();
 
-                if(user.equals("")|| pass.equals("") || repass.equals("")){
-                    Toast.makeText(Signup.this, "Fill all fields",Toast.LENGTH_SHORT).show();
-                }else{
-                    if(pass.equals(repass)){
-                       boolean usercheckResult= myDB.checkusername(user);
-                       if(usercheckResult==false){
-                           boolean regResult= myDB.insertData(user, pass);
-                           if(regResult==true){
-                               Toast.makeText(Signup.this, "Registered Successfully.",Toast.LENGTH_SHORT).show();
-                               Intent intent = new Intent (getApplicationContext(), Login.class) ;
-                               startActivity(intent);
-                           }else{
-                               Toast.makeText(Signup.this, "Registration Failed!",Toast.LENGTH_SHORT).show();
-                           }
-                       }else{
-                           Toast.makeText(Signup.this, "User already exists. \n Please Sign In.",Toast.LENGTH_SHORT).show();
-                       }
+                if (user.equals("") || pass.equals("") || repass.equals("")) {
+                    Toast.makeText(Signup.this, "Fill all fields", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (pass.equals(repass)) {
+                        boolean usercheckResult = myDB.checkusername(user);
+                        if (usercheckResult == false) {
+                            boolean regResult = myDB.insertData(user, pass);
+                            if (regResult == true) {
+                                Toast.makeText(Signup.this, "Registered Successfully.", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), Login.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(Signup.this, "Registration Failed!", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(Signup.this, "User already exists. \n Please Sign In.", Toast.LENGTH_SHORT).show();
+                        }
 
-                    }else{
+                    } else {
                         Toast.makeText(Signup.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -83,7 +81,7 @@ public class Signup extends AppCompatActivity {
         });
     }
 
-    private void applyTheme(){
+    private void applyTheme() {
         int theme = PreferenceManager.getDefaultSharedPreferences(this).getInt("com.isavit.codey.DARK_STATUS", AppCompatDelegate.MODE_NIGHT_NO);
         AppCompatDelegate.setDefaultNightMode(theme);
         getDelegate().applyDayNight();

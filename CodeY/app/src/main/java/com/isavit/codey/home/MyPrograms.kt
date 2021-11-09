@@ -8,7 +8,6 @@ import android.widget.ImageButton
 import com.isavit.codey.R
 
 
-
 class MyPrograms : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +16,7 @@ class MyPrograms : AppCompatActivity() {
 
 
         val button1 = findViewById<ImageButton>(R.id.imageButton1)
-        button1.setOnClickListener{
+        button1.setOnClickListener {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }

@@ -18,34 +18,33 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         var currentTheme = MyPreferences(this).darkMode
         applyTheme(currentTheme)
-        val myprog= findViewById<TextView>(R.id.MyPrograms)
+        val myprog = findViewById<TextView>(R.id.MyPrograms)
         val clickscanrun = findViewById<TextView>(R.id.clickscanrun)
         val notes = findViewById<TextView>(R.id.notes)
         val themeSwitch = findViewById<ImageButton>(R.id.themeSwitch)
 
         myprog.setOnClickListener {
-            var intent = Intent( this, MyPrograms::class.java)
+            var intent = Intent(this, MyPrograms::class.java)
             startActivity(intent)
         }
 
         clickscanrun.setOnClickListener {
-            var intent = Intent( this, ClickScanRun::class.java)
+            var intent = Intent(this, ClickScanRun::class.java)
             startActivity(intent)
         }
 
-       notes.setOnClickListener {
-            var intent = Intent( this, Notes::class.java)
+        notes.setOnClickListener {
+            var intent = Intent(this, Notes::class.java)
             startActivity(intent)
         }
         themeSwitch.setOnClickListener {
-            if(currentTheme == AppCompatDelegate.MODE_NIGHT_NO){
+            if (currentTheme == AppCompatDelegate.MODE_NIGHT_NO) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 delegate.applyDayNight()
                 MyPreferences(this).darkMode = AppCompatDelegate.MODE_NIGHT_YES
                 themeSwitch.setImageResource(R.drawable.bulboff)
 
-            }
-            else{
+            } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 delegate.applyDayNight()
                 MyPreferences(this).darkMode = AppCompatDelegate.MODE_NIGHT_NO
@@ -55,13 +54,13 @@ class Home : AppCompatActivity() {
         }
 
     }
-    private fun applyTheme(theme:Int){
+
+    private fun applyTheme(theme: Int) {
         AppCompatDelegate.setDefaultNightMode(theme)
         delegate.applyDayNight()
-        if(theme == AppCompatDelegate.MODE_NIGHT_NO){
+        if (theme == AppCompatDelegate.MODE_NIGHT_NO) {
             themeSwitch.setImageResource(R.drawable.bulbon)
-        }
-        else{
+        } else {
             themeSwitch.setImageResource(R.drawable.bulboff)
 
         }

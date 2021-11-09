@@ -33,11 +33,11 @@ class ClickScanRun : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val button2 = findViewById<ImageButton>(R.id.imageButton2)
-        button2.setOnClickListener{
+        button2.setOnClickListener {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
 
@@ -72,7 +72,8 @@ class ClickScanRun : AppCompatActivity() {
             }
 
             override fun onPermissionRationaleShouldBeShown(
-                p0: PermissionRequest?, p1: PermissionToken?) {
+                p0: PermissionRequest?, p1: PermissionToken?
+            ) {
                 showRotationalDialogForPermission()
             }
         }).onSameThread().check()
@@ -85,12 +86,12 @@ class ClickScanRun : AppCompatActivity() {
     }
 
 
-
     private fun cameraCheckPermission() {
         Dexter.withContext(this)
             .withPermissions(
                 android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                android.Manifest.permission.CAMERA).withListener(
+                android.Manifest.permission.CAMERA
+            ).withListener(
 
                 object : MultiplePermissionsListener {
                     override fun onPermissionsChecked(report: MultiplePermissionsReport?) {
@@ -105,7 +106,8 @@ class ClickScanRun : AppCompatActivity() {
 
                     override fun onPermissionRationaleShouldBeShown(
                         p0: MutableList<PermissionRequest>?,
-                        p1: PermissionToken?) {
+                        p1: PermissionToken?
+                    ) {
                         showRotationalDialogForPermission()
                     }
 
@@ -115,8 +117,10 @@ class ClickScanRun : AppCompatActivity() {
 
     private fun showRotationalDialogForPermission() {
         AlertDialog.Builder(this)
-            .setMessage("It looks like you have turned off permissions"
-                    + "required for this feature. It can be enable under App settings!!!")
+            .setMessage(
+                "It looks like you have turned off permissions"
+                        + "required for this feature. It can be enable under App settings!!!"
+            )
 
             .setPositiveButton("Go TO SETTINGS") { _, _ ->
 
@@ -169,7 +173,6 @@ class ClickScanRun : AppCompatActivity() {
         }
 
     }
-
 
 
 }

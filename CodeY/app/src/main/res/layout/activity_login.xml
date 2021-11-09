@@ -25,14 +25,12 @@
         android:layout_width="300sp"
         android:layout_height="50sp"
         android:layout_marginTop="32dp"
+        android:hint="@string/username"
         android:text=""
         android:textSize="20sp"
-        android:hint="@string/username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
-
-
 
 
     <EditText
@@ -41,13 +39,13 @@
         android:layout_width="300sp"
         android:layout_height="50sp"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/usernameLogin"
-        app:layout_constraintStart_toStartOf="@+id/usernameLogin"
-        app:layout_constraintTop_toBottomOf="@+id/usernameLogin"
+        android:hint="@string/password"
+        android:inputType="textPassword"
         android:text=""
         android:textSize="20sp"
-        android:hint="@string/password"
-        android:inputType="textPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/usernameLogin"
+        app:layout_constraintStart_toStartOf="@+id/usernameLogin"
+        app:layout_constraintTop_toBottomOf="@+id/usernameLogin" />
 
 
     <Button

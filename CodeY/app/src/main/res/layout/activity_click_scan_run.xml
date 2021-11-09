@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data class=".databinding.ActivityMainBinding">
         <!-- add variables & imports into here -->
@@ -18,7 +18,6 @@
             android:layout_height="59dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-
             android:background="@color/transparent_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +34,7 @@
             android:layout_marginStart="60dp"
             android:layout_marginTop="20dp"
             android:text="@string/click_scan_run"
-            android:textSize="40sp"
+            android:textSize="36sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
