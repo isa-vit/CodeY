@@ -1,14 +1,12 @@
 package com.isavit.codey.home
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.isavit.codey.R
-import com.isavit.codey.home.MyPrograms
 import kotlinx.android.synthetic.main.activity_home.*
 
 

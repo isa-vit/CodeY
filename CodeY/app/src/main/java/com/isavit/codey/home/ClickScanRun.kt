@@ -1,20 +1,19 @@
 package com.isavit.codey.home
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.ImageButton
-import com.isavit.codey.R
 import android.app.Activity
 import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.Settings
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import coil.load
-import coil.transform.CircleCropTransformation
+import com.isavit.codey.R
 import com.isavit.codey.databinding.ActivityMainBinding
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport

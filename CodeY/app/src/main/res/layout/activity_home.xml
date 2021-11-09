@@ -8,95 +8,115 @@
 
     <ImageButton
         android:id="@+id/themeSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:background="#00FFFFFF"
-        app:layout_constraintRight_toRightOf="@id/linearLayout"
-        app:layout_constraintTop_toTopOf="@id/linearLayout"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bulbon"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:text="@string/holla_coder"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/themeSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/themeSwitch" />
+
+    <TextView
+        android:id="@+id/NewProgram"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/card_bg"
+        android:gravity="center"
+        android:padding="32dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/new_programs"
+        android:textColor="#454545"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/myPrograms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/myPrograms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/card_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="32dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/my_programs"
+        android:textColor="#454545"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/clickscanrun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewProgram" />
+
+    <TextView
+        android:id="@+id/clickscanrun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/card_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="32dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/click_scan_run"
+        android:textColor="#454545"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myPrograms" />
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/card_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="32dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/notes"
+        android:textColor="#454545"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="300dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/holla_coder"
-            android:textSize="35sp"
-            tools:layout_editor_absoluteX="52dp"
-            tools:layout_editor_absoluteY="53dp" />
-
-
-        <TextView
-            android:id="@+id/NewProgram"
-            android:layout_width="350dp"
-            android:layout_height="77dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/card_bg"
-            android:gravity="center"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="@string/new_programs"
-            android:textColor="#454545"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/myPrograms"
-            android:layout_width="350dp"
-            android:layout_height="77dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/card_bg"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="@string/my_programs"
-            android:textColor="#454545"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/clickscanrun"
-            android:layout_width="350dp"
-            android:layout_height="77dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/card_bg"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="@string/click_scan_run"
-            android:textColor="#454545"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/notes"
-            android:layout_width="350dp"
-            android:layout_height="77dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/card_bg"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="@string/notes"
-            android:textColor="#454545"
-            android:textSize="24sp" />
-
-    </LinearLayout>
-
+        app:layout_constraintTop_toBottomOf="@+id/clickscanrun" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
