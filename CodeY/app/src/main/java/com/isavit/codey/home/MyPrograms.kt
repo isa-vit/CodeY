@@ -14,7 +14,7 @@ class MyPrograms : AppCompatActivity() {
         setContentView(R.layout.activity_my_programs)
 
 
-        val button1 = findViewById<ImageButton>(R.id.imageButton1)
+        val button1 = findViewById<ImageButton>(R.id.backButton)
         button1.setOnClickListener {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
